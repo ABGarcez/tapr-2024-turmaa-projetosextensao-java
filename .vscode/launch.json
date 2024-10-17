@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroservprojetosextensaoApplication<microservprojetosextensao>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.univille.microservprojetosextensao.microservprojetosextensaoApplication",
+            "projectName": "microservprojetosextensao",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": ["-Djavax.net.ssl.trustStore=/workspaces/tapr-2024-turmaa-projetosextensao-java/native.jks",
+                       "-Djavax.net.ssl.trustStorePassword=univille"]
+
+        }
+    ]
+}
