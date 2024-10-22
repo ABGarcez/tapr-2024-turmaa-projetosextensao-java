@@ -2,9 +2,19 @@ package br.univille.microservprojetosextensao.controleprojetos.entities;
 
 import java.util.UUID;
 
+import org.springframework.data.annotation.Id;
+
+import com.azure.spring.data.cosmos.core.mapping.Container;
+import com.azure.spring.data.cosmos.core.mapping.GeneratedValue;
+import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
+
 import br.univille.microservprojetosextensao.gestaoequipes.entities.EquipeEntity;
 
+@Container(containerName = "projeto", autoCreateContainer = true)
 public class ProjetoEntity {
+    @Id
+    @PartitionKey
+    @GeneratedValue
     public UUID id;
     public String titulo;
     public String objetivo;
