@@ -1,4 +1,4 @@
-package br.univille.microservprojetosextensao.repository;
+package br.univille.microservprojetosextensao.controleprojetos.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
