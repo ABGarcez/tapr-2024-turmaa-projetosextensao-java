@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.UUID;
 
 public class EquipeEntity {
-    public UUID id;
+    public String id;
     public List<BolsistasEntity> integrantes;
-    public UUID getId() {
+    public String getId() {
         return id;
     }
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
     public List<BolsistasEntity> getIntegrantes() {
@@ -18,7 +18,7 @@ public class EquipeEntity {
     public void setIntegrantes(List<BolsistasEntity> integrantes) {
         this.integrantes = integrantes;
     }
-    public EquipeEntity(UUID id, List<BolsistasEntity> integrantes) {
+    public EquipeEntity(String id, List<BolsistasEntity> integrantes) {
         this.id = id;
         this.integrantes = integrantes;
     }

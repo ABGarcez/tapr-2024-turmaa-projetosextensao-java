@@ -1,6 +1,5 @@
 package br.univille.microservprojetosextensao.controleprojetos.entities;
 
-import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 
@@ -15,14 +14,14 @@ public class ProjetoEntity {
     @Id
     @PartitionKey
     @GeneratedValue
-    public UUID id;
+    public String id;
     public String titulo;
     public String objetivo;
     public EquipeEntity equipe;
-    public UUID getId() {
+    public String getId() {
         return id;
     }
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getTitulo() {
@@ -43,7 +42,7 @@ public class ProjetoEntity {
     public void setEquipe(EquipeEntity equipe) {
         this.equipe = equipe;
     }
-    public ProjetoEntity(UUID id, String titulo, String objetivo, EquipeEntity equipe) {
+    public ProjetoEntity(String id, String titulo, String objetivo, EquipeEntity equipe) {
         this.id = id;
         this.titulo = titulo;
         this.objetivo = objetivo;
