@@ -16,8 +16,6 @@ public class ProjetoServiceImpl implements ProjetoService {
     @Autowired
     private ProjetoRepository repository;
 
-
-
     @Override
     public List<ProjetoEntity> getAll() {
         var retornoIterador = repository.findAll();
