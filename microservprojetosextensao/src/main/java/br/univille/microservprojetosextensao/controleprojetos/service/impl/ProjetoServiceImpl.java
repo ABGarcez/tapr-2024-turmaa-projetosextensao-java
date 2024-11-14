@@ -27,8 +27,35 @@ public class ProjetoServiceImpl implements ProjetoService {
 
     @Override
     public ProjetoEntity save(ProjetoEntity projetoEntity) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+       
+        return repository.save(projetoEntity);
+    }
+
+    @Override
+    public ProjetoEntity update(String id, ProjetoEntity projetoEntity) {
+       var buscarProjeto = repository.findById(id);
+       if (buscarProjeto.isPresent()){
+            var projetoAntigo = buscarProjeto.get();
+            projetoAntigo.setEquipe(projetoEntity.getEquipe());
+            projetoAntigo.setId(projetoEntity.getId());
+            projetoAntigo.setObjetivo(projetoEntity.getObjetivo());
+            projetoAntigo.setTitulo(projetoEntity.getTitulo());
+            repository.save(projetoAntigo);
+            return projetoAntigo;
+       }
+       return null;
+    }
+
+    @Override
+    public ProjetoEntity delete(String id) {
+      var buscarProjeto = repository.findById(id);
+      if (buscarProjeto.isPresent()){
+            var projetoAntigo = buscarProjeto.get();
+            repository.delete(projetoAntigo);
+            return projetoAntigo;
+    
+        }
+        return null;
     }
     
 }

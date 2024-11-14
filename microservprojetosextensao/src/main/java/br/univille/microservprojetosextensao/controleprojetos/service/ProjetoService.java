@@ -7,4 +7,6 @@ import br.univille.microservprojetosextensao.controleprojetos.entities.ProjetoEn
 public interface ProjetoService {
     List<ProjetoEntity> getAll();
     ProjetoEntity save(ProjetoEntity projetoEntity);
+    ProjetoEntity update(String id, ProjetoEntity projetoEntity);
+    ProjetoEntity delete(String id);
 }
